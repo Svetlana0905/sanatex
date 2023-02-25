@@ -1,0 +1,134 @@
+.aside {
+   @include flex-column;
+   max-width: 316px;
+   width: 100%;
+   height: fit-content;
+   padding: 35px 23px;
+   border-radius: $borderRadius;
+   border: 1px solid rgba(19, 29, 64, 0.1);
+
+   &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: $fontColor;
+      margin-bottom: 35px;
+   }
+
+   &__link {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $fontColor80;
+      margin-bottom: 20px
+   }
+}
+
+.form-aside {
+   padding-top: 30px;
+
+   &__btn-block {
+      @include flex-row;
+      gap: 16px;
+      padding-top: 30px;
+   }
+
+   &__dark-btn-small {
+      font-family: $mainFont;
+      padding: 14px 19px 13px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+   }
+
+   &__title {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: $fontColor;
+      margin-bottom: 26px;
+   }
+}
+
+.datails-form-aside {
+   @include flex-column;
+   background: $grayColor;
+   width: 100%;
+   overflow: hidden;
+   font-family: $otherFont;
+   border-bottom: 0;
+   margin-bottom: 10px;
+
+   &__summary {
+      position: relative;
+      display: block;
+      padding: 10px 40px 0 0;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $fontColor80;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+         transition: transform .5s;
+      }
+
+      &:before {
+         top: 11px;
+         right: 0px;
+         content: "";
+         position: absolute;
+         color: transparent;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         background: $borderColorSummary;
+      }
+
+      &::after {
+         top: 14px;
+         right: 5px;
+         content: "";
+         position: absolute;
+         width: 9px;
+         height: 9px;
+         background: transparent;
+         border-left: 2px solid $whiteColor;
+         border-top: 2px solid $whiteColor;
+         transform: rotate(225deg);
+      }
+   }
+
+   &[open]>summary {
+      color: $fontTitleColor;
+      border-bottom: 0;
+      border-radius: 15px;
+      transition: $standartTrans;
+      background: none;
+      padding: 10px 0 19px;
+
+      &:before {
+         background: $fontTitleColor;
+      }
+
+      &::after {
+         top: 16px;
+         right: 3px;
+         transform: rotate(-45deg);
+      }
+   }
+
+   &[open] summary~* {
+      animation: sweep .5s ease-in-out;
+      padding: 10px 0 4px;
+   }
+
+   &[open] {
+      margin-bottom: 17px;
+   }
+}

@@ -1,0 +1,168 @@
+.feature {
+   @include flex-column;
+   max-width: 528px;
+   width: 100%;
+   padding-top: 18px;
+
+   &__title {
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: $fontColor;
+      margin-bottom: 32px;
+
+      @include media(600) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__subtitle {
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $fontColor;
+
+      @include media(600) {
+         margin-bottom: 18px;
+      }
+   }
+
+   &__text {
+      @include flex-row;
+      justify-content: space-between;
+      width: 100%;
+      padding: 13px 0;
+      font-family: $mainFont;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $fontColor;
+
+      @include media(600) {
+         font-size: 18px;
+         line-height: 21px;
+         padding: 13px 0 12px;
+      }
+
+      & span {
+         font-family: $mainFont;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 16px;
+         color: $fontTextColor;
+
+         @include media(600) {
+            font-size: 18px;
+            line-height: 21px
+         }
+      }
+
+      &:not(:last-child) {
+         border-bottom: 1px solid rgb(230, 230, 230);
+      }
+
+      &:last-child {
+         margin-bottom: 25px
+      }
+   }
+
+   &__btn-block {
+      @include flex-row;
+      gap: 5px;
+
+      @include media (390) {
+         gap: 25px;
+      }
+   }
+
+   &__bottom-block {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 34px;
+      margin-top: -2px;
+
+      & .feature__btn-block {
+         grid-column-start: 1;
+         grid-column-end: 10;
+         order: 2;
+      }
+
+      & .color-block {
+         grid-column-start: 1;
+         grid-column-end: 10;
+         order: 1;
+      }
+
+      & .dark-btn-small {
+         @include flex-row;
+         justify-content: center;
+         grid-column-start: 1;
+         grid-column-end: 10;
+         order: 3;
+      }
+
+      @include media(390) {
+         & .feature__btn-block {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            order: 2;
+         }
+
+         & .color-block {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            order: 1;
+
+         }
+
+         & .dark-btn-small {
+            grid-column-start: 1;
+            grid-column-end: 12;
+            order: 3;
+            align-self: end;
+         }
+      }
+
+      @include media(600) {
+         & .feature__btn-block {
+            grid-column-start: 1;
+            grid-column-end: 13;
+            order: 1;
+         }
+
+         & .color-block {
+            grid-column-start: 1;
+            grid-column-end: 8;
+            order: 2;
+         }
+
+         & .dark-btn-small {
+            grid-column-start: 8;
+            grid-column-end: 13;
+            order: 3;
+            font-family: $mainFont;
+         }
+      }
+   }
+}
+
+.color-block {
+   @include flex-column;
+   gap: 15px;
+
+   &__inner {
+      @include flex-row;
+      gap: 14px;
+      height: 36px;
+   }
+
+   &__text {
+      font-family: $mainFont;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $fontColor;
+   }
+}

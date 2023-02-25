@@ -1,0 +1,21 @@
+<section class="news">
+   <div class="news__container">
+      <div class="news__top">
+         <h3 class="subtitle-news">Новости и статьи</h3>
+         <a class="news__link link-news" href="news-page.html">Перейти в раздел</a>
+      </div>
+      <div class="news__content">
+         @@include('./newsItem.html', {
+         'img': './images/news/1.jpg'
+         })
+         @@include('./newsItem.html', {
+         'img': './images/news/2.jpg'
+         })
+         @@include('./newsItem.html', {
+         'img': './images/news/3.jpg'
+         })
+      </div>
+      <a class="news__dark-button dark-button" href="news-page.html">Смотреть все новости</a>
+   </div>
+
+</section>

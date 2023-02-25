@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Карточка товара'
+})
+
+<body>
+   @@include('html/popup.html', {})
+   <div class="body">
+      <div class="body__inner contact-page">
+
+         @@include('html/header.html', {
+         'style': 'white',
+         'logo': './images/icons/logo_white.svg',
+         'burger': 'burger-btn white',
+         'color-link': 'nav-link dark',
+         'color': 'dark',
+         'svg-telegram': './images/icons/telegram-dark.svg',
+         'svg-watsap': './images/icons/watsap-dark.svg'
+         })
+
+         @@include('html/ui/breadCrumbs.html', {
+         'link': 'Модель',
+         })
+         <div class="product-page">
+
+            <div class="product-page__content">
+               @@include('html/ui/sliderProduct.html', {
+               'slide1': './images/goods/1.svg',
+               'slide2': './images/goods/2.svg',
+               'slide3': './images/goods/3.svg',
+               })
+               @@include('html/ui/feature.html', {})
+            </div>
+
+            <h3 class="product-page__subtitle-top subtitle">Описание</h3>
+            <p class="product-page__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+               ligula
+               eget dolor. Aenean massa.
+               Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+            <h3 class="product-page__subtitle subtitle">Посмотрите другие решения в этой категории</h3>
+            <div class="product-page__goods-bottom-block">
+               @@include('html/goodsItem.html', {
+               'img': "./images/goods/1.svg"
+               })
+               @@include('html/goodsItem.html', {
+               'img': "./images/goods/2.svg"
+               })
+               @@include('html/goodsItem.html', {
+               'img': "./images/goods/3.svg"
+               })
+            </div>
+         </div>
+         @@include('html/form.html', {
+         'ls': 'ls-02'
+         })
+      </div>
+
+      @@include('html/footer.html', {})
+      @@include('html/script.html', {})
+   </div>
+</body>
+
+</html>

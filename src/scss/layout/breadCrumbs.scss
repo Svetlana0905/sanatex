@@ -1,0 +1,9 @@
+.bread-crumbs {
+   margin-bottom: 30px;
+   padding-left: 0;
+
+   @include media(427) {
+      margin-bottom: 48px;
+      padding-left: 15px;
+   }
+}

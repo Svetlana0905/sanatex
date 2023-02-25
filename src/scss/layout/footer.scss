@@ -1,0 +1,124 @@
+.footer {
+   @include flex-column;
+   align-items: center;
+   justify-content: space-between;
+   gap: 18px;
+   max-width: 1365px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 36px 0 25px;
+   border-radius: $borderRadius;
+   background: $barndColorBlue;
+
+   @include media(600) {
+      @include flex-row;
+      padding: 35px 20px 37px;
+   }
+
+   @include media(1074) {
+      padding: 35px 89px 37px 103px;
+      gap: 25px;
+   }
+
+   & .nav-block {
+      @include flex-column;
+      gap: 7px;
+      margin-left: -9px;
+
+      @include media(600) {
+         @include flex-row;
+         gap: 42px;
+      }
+   }
+
+   &__content {
+      @include flex-column;
+      align-items: center;
+      gap: 18px;
+
+      @include media(628) {
+         @include flex-row;
+         align-items: center;
+         gap: 25px;
+      }
+   }
+
+   &__contacts {
+      @include flex-column;
+      align-items: center;
+      gap: 25px;
+
+      @include media(600) {
+         @include flex-row;
+      }
+   }
+
+   & .navigation {
+      @include flex-column;
+      gap: 1px;
+
+      @include media(998) {
+         @include flex-row;
+      }
+   }
+
+   & .navigation__link {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $whiteColor80;
+
+      @include media(600) {
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 21px;
+      }
+   }
+
+   & .social-block {
+      @include flex-row;
+      align-items: center;
+      gap: 15px;
+   }
+
+   &__phone-block {
+      gap: 6px;
+   }
+
+   &__phone {
+      display: block;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $whiteColor;
+
+      @include media(600) {
+         display: none;
+      }
+   }
+
+   & .phone-block__link {
+
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: right;
+      color: $whiteColor;
+
+      @include media (600) {
+         font-family: 'Montserrat';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 22px;
+         line-height: 27px;
+         text-align: right;
+         color: $whiteColor;
+      }
+   }
+}

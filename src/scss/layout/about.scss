@@ -1,0 +1,22 @@
+.about-block {
+   width: 100%;
+   background: $grayColor;
+
+   &__container {
+      @include flex-column;
+      align-items: self-start;
+      gap: 20px;
+      max-width: 1274px;
+      margin: 0 auto;
+      padding: 0 25px 0 28px;
+
+      @include media(1024) {
+         padding: 99px 25px 100px 28px;
+      }
+   }
+
+   & h2 {
+      margin-bottom: 7px;
+      color: $fontTitleColor;
+   }
+}

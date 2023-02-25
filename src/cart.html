@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Корзина товаров'
+})
+
+<body>
+   @@include('html/popup.html', {})
+   <div class="body">
+      <div class="body__inner cart-page">
+         @@include('html/header.html', {
+         'style': 'white',
+         'logo': './images/icons/logo_white.svg',
+         'burger': 'burger-btn white',
+         'color-link': 'nav-link dark',
+         'color': 'dark',
+         'svg-telegram': './images/icons/telegram-dark.svg',
+         'svg-watsap': './images/icons/watsap-dark.svg'
+         })
+
+         @@include('html/ui/breadCrumbs.html', {
+         'link': 'Корзина товаров',
+         })
+         <h2 class="contact-page__title">Корзина товаров</h2>
+         <section class="cart-page__content">
+            <div class="cart-page__item item-cart-product">
+               <div class="item-cart-product__product">
+                  <img class="item-cart-product__img" src="./images/goods/3.svg" alt="Перчатки нитриловые">
+                  <div class="item-cart-product__name">
+                     <h3 class="item-cart-product__title">Перчатки нитриловые</h3>
+                     <p class="item-cart-product__text">
+                        <span>Упаковка: 100 шт</span> <span>Размер: XL</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="item-cart-product__btn-block">
+                  <button class="round-btn-add"></button>
+                  <button class="round-btn-delete"></button>
+               </div>
+            </div>
+            <div class="cart-page__item item-cart-product">
+               <div class="item-cart-product__product">
+                  <img class="item-cart-product__img" src="./images/goods/3.svg" alt="Перчатки нитриловые">
+                  <div class="item-cart-product__name">
+                     <h3 class="item-cart-product__title">Перчатки нитриловые</h3>
+                     <p>
+                        <span>Упаковка: 100 шт</span> <span>Размер: XL</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="item-cart-product__btn-block">
+                  <button class="round-btn-add"></button>
+                  <button class="round-btn-delete"></button>
+               </div>
+            </div>
+            <div class="cart-page__item item-cart-product">
+               <div class="item-cart-product__product">
+                  <img class="item-cart-product__img" src="./images/goods/3.svg" alt="Перчатки нитриловые">
+                  <div class="item-cart-product__name">
+                     <h3 class="item-cart-product__title">Перчатки нитриловые</h3>
+                     <p>
+                        <span>Упаковка: 100 шт</span> <span>Размер: XL</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="item-cart-product__btn-block">
+                  <button class="round-btn-add"></button>
+                  <button class="round-btn-delete"></button>
+               </div>
+            </div>
+         </section>
+         @@include('html/form.html', {
+         'ls':'ls-02'
+         })
+      </div>
+
+      @@include('html/footer.html', {})
+      @@include('html/script.html', {})
+   </div>
+</body>
+
+</html>

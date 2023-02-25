@@ -1,0 +1,30 @@
+@mixin flex-column {
+   display: flex;
+   flex-direction: column;
+}
+
+@mixin flex-row {
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin round-btn-after {
+   content: "";
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background: transparent;
+   border-left: 2px solid $whiteColor;
+   border-top: 2px solid $whiteColor;
+   transform: rotate(225deg);
+}
+
+@mixin round-btn-before {
+   content: "";
+   position: absolute;
+   color: transparent;
+   width: 24px;
+   height: 24px;
+   border-radius: 100%;
+   background: $borderColorSummary;
+}

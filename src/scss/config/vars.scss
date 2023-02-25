@@ -1,0 +1,49 @@
+$mainFont: 'Roboto'; // основное семейство шрифта
+$secondaryFontFamily: 'Montserrat';
+$otherFont: 'Inter';
+$mainWeight: 400; // основное начертание шрифта
+$mainFontSise: var(--typography-body1); // основной размер шрифрта
+
+$whiteColor: rgba(255, 255, 255, 1);
+$whiteColor80: rgba(255, 255, 255, .8);
+$whiteColor25: rgba(255, 255, 255, .25);
+$fontTextColor: rgba(0, 0, 0, 0.55);
+$fontTitleColor: rgba(46, 65, 134, 1);
+$fontColor: rgba(0, 0, 0, 1);
+$fontColor80: rgba(0, 0, 0, 0.8);
+$barndColorBlue: rgba(19, 29, 64, 1);
+$fontColorLink: rgba(37, 84, 255, 1);
+
+$bglightGray: rgba(243, 243, 243, 0.55);
+$bgColorGray: rgba(243, 243, 243, 1);
+$bgColorBlue: rgba(228, 231, 242, 0.3);
+$bgColorSummary: rgba(19, 29, 64, 0.34);
+$bgInputForm: rgba(247, 248, 252, 1);
+$bgDisabled: rgba(232, 232, 232, 1);
+
+$borderColorSummary: rgba(19, 29, 64, 0.08);
+
+$grayColor: rgba(251, 251, 251, 1);
+$bodyLokBg: rgba(0, 0, 0, 0.79);
+$brandColor: rgba(19, 29, 64, 0.7);
+
+$checkInputBg: rgb(155, 155, 155);
+
+
+$borderHeader: 0.5px solid $whiteColor25;
+$borderSecondaryBtn: 0.8px solid $fontTextColor;
+$borderSummary: 0.8px solid $borderColorSummary;
+$borderInputForm: 1px solid rgba(17, 61, 228, 0.06);
+$inputFormBg: rgba(247, 248, 252, 0.7);
+
+$borderRadius: 20px;
+$headerBprderRadius: 25px;
+$borderRadiusSmall: 12px;
+
+$btnBoxShadow: 0px 4px 8px 0px $brandColor;
+
+
+$standartTrans: all 280ms ease-in-out 0ms;
+$longTrans: all 700ms ease-in-out 0ms;
+$transormPopupStart: perspective(600px) translate(0px, -100%) rotateX(45deg);
+$transormPopupAnd: perspective(600px) translate(0px, 15%) rotateX(0deg);

@@ -1,0 +1,30 @@
+.popular {
+   width: 100%;
+   margin: 0 auto;
+   background: $grayColor;
+
+   &__container {
+      @include flex-column;
+      max-width: 1280px;
+      width: 100%;
+      padding: 45px 25px 55px;
+      align-items: center;
+      margin: 0 auto;
+
+      @include media(600) {
+         padding: 70px 25px 55px;
+      }
+   }
+
+   &__secondary-button {
+      margin-bottom: 23px;
+   }
+
+   & h2 {
+      margin-bottom: 35px;
+
+      @include media(600) {
+         margin-bottom: 70px;
+      }
+   }
+}

@@ -1,0 +1,6 @@
+// !media
+@mixin media($width) {
+  @media (min-width: #{$width + px}) {
+    @content;
+  }
+}

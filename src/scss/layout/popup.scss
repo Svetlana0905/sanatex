@@ -1,0 +1,116 @@
+.popup {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: $bodyLokBg;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   overflow-y: auto;
+   overflow-x: hidden;
+   transition: $longTrans;
+   z-index: 10;
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   &.active &__container {
+      transform: $transormPopupAnd;
+      opacity: 1;
+   }
+
+   &__container {
+      margin: 0 auto;
+      position: relative;
+      transition: $longTrans;
+      opacity: 0;
+      transform: $transormPopupStart;
+   }
+
+   &__body {
+      @include flex-column;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      margin: 0 auto;
+      max-width: 762px;
+      width: 100%;
+      padding: 80px 20px;
+      background: $barndColorBlue;
+      border-radius: $borderRadius;
+
+      @include media(600) {
+         gap: 20px;
+      }
+
+      & .popup-title {
+         margin-bottom: 15px;
+
+         @include media(600) {
+            margin-bottom: 45px;
+         }
+      }
+   }
+
+   &__form {
+      @include flex-column;
+      width: 100%;
+      align-items: center;
+      gap: 30px;
+   }
+
+   &__product {
+      @include flex-row;
+      max-width: 412px;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5px 20px 5px 5px;
+      border: $borderHeader;
+      border-radius: $borderRadius;
+   }
+}
+
+.product-popup {
+   &__img {
+      max-width: 100px;
+      padding: 10px 8px;
+      background: rgba(247, 248, 252, 0.25);
+      border: $borderInputForm;
+      border: $borderHeader;
+      border-radius: $borderRadius;
+
+      & img {
+         align-items: center;
+         max-width: 90%;
+         max-width: 90%;
+         object-fit: cover;
+      }
+   }
+
+   &__title,
+   &__count {
+      font-size: 13px;
+      line-height: 15px;
+      font-family: $mainFont;
+      color: $whiteColor;
+   }
+
+   &__amount-block {
+      @include flex-column;
+      gap: 8px;
+   }
+
+   &__title {
+      font-weight: 600;
+   }
+
+   &__count {
+      font-weight: 300;
+   }
+}

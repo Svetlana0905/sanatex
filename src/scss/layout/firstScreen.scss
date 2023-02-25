@@ -1,0 +1,146 @@
+.first-screen {
+   position: relative;
+   width: 100%;
+   background: $barndColorBlue;
+
+   &__container {
+      @include flex-column;
+      max-width: 1306px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 50px;
+      padding: 22px 10px 0;
+
+      @include media(390) {
+         padding: 22px 25px 0;
+      }
+
+      @include media(764) {
+         padding: 76px 25px 0;
+         gap: 141px;
+      }
+   }
+
+   &__bottom {
+      max-width: 1440px;
+      width: 100%;
+      height: 15px;
+      margin: 0 auto;
+      background: $grayColor;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+   }
+
+   &__body {
+      @include flex-row;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      @include media(764) {
+         margin-bottom: 236px;
+      }
+   }
+
+   &__content {
+      max-width: 637px;
+
+      @include media(764) {
+         padding-top: 99px;
+      }
+   }
+
+   & h1 {
+      margin-bottom: 10px;
+
+      @include media(764) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__text {
+      color: $whiteColor;
+      margin-bottom: 50px;
+
+      @include media(764) {
+         margin-bottom: 72px;
+      }
+   }
+
+   &__img-content {
+      display: none;
+
+      @include media(764) {
+         @include flex-row;
+         justify-content: end;
+         gap: 10px;
+         height: 504px;
+      }
+   }
+}
+
+.img-content {
+
+   &__right {
+      width: 243px;
+      height: 100%;
+      background: $whiteColor;
+      border-radius: 42px;
+      display: none;
+
+      @include media(954) {
+         display: block;
+      }
+
+      & img {
+         position: relative;
+         display: block;
+         right: 88px;
+         top: 80px;
+      }
+   }
+}
+
+.images-block {
+   @include flex-column;
+   gap: 10px;
+
+   &__top,
+   &__bottom {
+      @include flex-column;
+      align-items: center;
+      width: 243px;
+      height: 247px;
+      background: $fontTitleColor;
+
+      & p {
+         text-align: center;
+         color: $whiteColor;
+         opacity: 0.7;
+         font-family: $secondaryFontFamily;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 17px;
+         line-height: 21px;
+      }
+   }
+
+   &__top {
+      padding-top: 36px;
+      border-radius: 42.75px 85.5px 0px 36px;
+
+      & img {
+         margin-bottom: 22px;
+         color: $whiteColor;
+         opacity: 0.7;
+      }
+   }
+
+   &__bottom {
+      padding-top: 23px;
+      border-radius: 36px 0px 85.5px 42.75px;
+
+      & img {
+         margin-bottom: 20px;
+      }
+   }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Контакты'
+})
+
+<body>
+   @@include('html/popup.html', {})
+   <div class="body">
+      <div class="body__inner contact-page">
+
+         @@include('html/header.html', {
+         'style': 'white',
+         'logo': './images/icons/logo_white.svg',
+         'burger': 'burger-btn white',
+         'color-link': 'nav-link dark',
+         'color': 'dark',
+         'svg-telegram': './images/icons/telegram-dark.svg',
+         'svg-watsap': './images/icons/watsap-dark.svg'
+         })
+
+         @@include('html/ui/breadCrumbs.html', {
+         'link': 'Контакты'
+         })
+         <div class="contact-page__wrapper">
+            <h2 class="contact-page__title">Контакты</h2>
+            <div class="contact-page__inner-content">
+               <div class="contact-page__content">
+                  <p class="contact-page__text-first">Вы всегда можете связаться с нами любым удобным способом</p>
+                  <p class="contact-page__text">Саратов: +7 (8452) 21-29-68</p>
+                  <p class="contact-page__text">Москва: +7 (499) 390-59-05</p>
+                  <p class="contact-page__text">По России: 8 (800) 550-31-60. (Бесплатно)</p>
+                  <p class="contact-page__text">Адрес: <span> г. Саратов, ул. Астраханская, 88, оф. 615</span></p>
+                  <p class="contact-page__text">Эл. почта: @gmail.com</p>
+                  <a href>Розничным покупателям</a>
+               </div>
+               <img src="./images/contactPage/1.svg" alt="Логотип компании" max-width="387" max-height="124">
+            </div>
+         </div>
+         @@include('html/form.html', {
+         'ls': 'ls-02'
+         })
+      </div>
+      @@include('html/footer.html', {})
+      @@include('html/script.html', {})
+   </div>
+</body>
+
+</html>

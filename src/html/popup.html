@@ -1,0 +1,36 @@
+<div class="popup">
+   <div class="popup__container">
+      <div class="popup__body">
+         <button class="popup__btn-close"></button>
+         <h3 class="popup-title">Оформление заказа</h3>
+         <form class="popup__form form-popup" method="post">
+            <label class="form-popup__label"><span class="pattern">Имя 3-16
+                  символов</span>
+               <input type="text" class="form-popup__input" placeholder="Ваше имя" pattern="\w{3-16}" required>
+            </label>
+
+            <label class="form-popup__label label"><span class="pattern">8-999-77-666-5555</span>
+               <input type="tel" class="form-popup__input" placeholder="Ваш телефон"
+                  pattern="[8]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </label>
+
+            <div class="popup__product product-popup">
+               <div class="product-popup__img">
+                  <img src="./images/goods/2.png" alt="Перчатки нитриловые">
+               </div>
+               <div class="product-popup__amount-block">
+                  <span class="product-popup__title">Перчатки нитриловые</span>
+                  <span class="product-popup__count">Кол-во 25 штук</span>
+                  <div class="counter-btn-block">
+                     <button class="counter-btn-block__plus">+</button>
+                     <span class="counter-btn-block__count">25</span>
+                     <button class="counter-btn-block__minus">-</button>
+                  </div>
+
+               </div>
+            </div>
+            <button type="submit" class="popup-button">Отправить заявку</button>
+         </form>
+      </div>
+   </div>
+</div>

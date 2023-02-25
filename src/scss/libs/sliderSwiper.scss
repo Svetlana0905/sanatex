@@ -1,0 +1,33 @@
+.swiper {
+   max-width: 851px;
+   width: 100%;
+   overflow: hidden;
+   list-style: none;
+   padding: 0;
+   margin-bottom: 39px;
+   margin-left: 0;
+
+   @include media(600) {
+      margin-bottom: 47px;
+   }
+}
+
+.swiper-wrapper {
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   display: flex;
+   transition-property: transform;
+   box-sizing: content-box;
+}
+
+.swiper-slide {
+   flex-shrink: 0;
+   width: 100%;
+   height: 100%;
+   transition-property: transform;
+
+   & img {
+      border-radius: $borderRadius;
+   }
+}

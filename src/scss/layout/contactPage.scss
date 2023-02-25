@@ -1,0 +1,142 @@
+.contact-page {
+   max-width: 1296px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 25px 18px 0;
+   margin-bottom: 44px;
+   background: $grayColor;
+
+   @include media(427) {
+      margin-bottom: 98px;
+      padding: 74px 20px 0;
+   }
+
+   & .header {
+      max-width: 1256px;
+      margin-bottom: 14px;
+   }
+
+   &__wrapper {
+      padding-left: 0px;
+      margin-bottom: 55px;
+
+      @include media(427) {
+         padding-left: 36px;
+         margin-bottom: 102px;
+      }
+   }
+
+   &__title {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
+      color: $fontColor80;
+
+      @include media(600) {
+         font-size: 32px;
+         line-height: 38px;
+         color: $fontColor;
+      }
+   }
+
+   &__inner-content {
+      @include flex-row;
+      justify-content: space-between;
+
+      & img {
+         position: relative;
+         display: none;
+
+         @include media(1100) {
+            display: block;
+            position: relative;
+            top: -71px;
+            right: 27px;
+         }
+      }
+   }
+
+   &__text-first {
+      font-size: 16px;
+      line-height: 22px;
+      color: $fontColor80;
+      margin-bottom: 25px;
+      max-width: 420px;
+
+      @include media(600) {
+         font-size: 24px;
+         line-height: 28px;
+         margin-bottom: 40px;
+      }
+   }
+
+   &__text {
+      color: $barndColorBlue;
+      margin-bottom: 25px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      &:nth-child(4) {
+         margin-bottom: 17px;
+      }
+
+      &:nth-child(5) {
+         margin-bottom: 19px;
+         max-width: 197px;
+      }
+
+      &:nth-child(6) {
+         margin-bottom: 14px;
+      }
+
+      @include media(600) {
+         font-size: 24px;
+         line-height: 28px;
+         margin-bottom: 20px;
+
+         &:nth-child(5) {
+            max-width: 100%;
+         }
+
+         &:nth-child(4) {
+            margin-bottom: 21px;
+         }
+
+         &:nth-child(6) {
+            margin-bottom: 21px;
+         }
+      }
+
+      & span {
+         color: $barndColorBlue;
+         padding-left: 5px;
+      }
+   }
+
+   &__content {
+      @include flex-column;
+      padding-top: 15px;
+
+      @include media(600) {
+         padding-top: 30px;
+      }
+
+      & a {
+         font-family: $mainFont;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 19px;
+         text-decoration-line: underline;
+         color: $fontColorLink;
+
+         @include media(600) {
+            font-size: 24px;
+            line-height: 28px;
+         }
+      }
+   }
+}

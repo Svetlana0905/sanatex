@@ -1,0 +1,80 @@
+<aside class="aside">
+   <h3 class="aside__title">Все категории</h3>
+   <a class="aside__link" href>Перчатки виниловые</a>
+   <a class="aside__link" href>Перчатки силиконовые</a>
+   <a class="aside__link" href>Перчатки резиновые</a>
+
+   <form method="post" name="form-aside" class="aside__form form-aside">
+      <h3 class=" form-aside__title">Поиск по параметрам</h3>
+      <details class="form-aside__datails datails-form-aside">
+         <summary class="datails-form-aside__summary">
+            Стерильность
+         </summary>
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Стерильность 1'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Стерильность 2'
+         })
+      </details>
+      <details class="form-aside__datails datails-form-aside">
+         <summary class="datails-form-aside__summary">
+            Материал
+         </summary>
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Натуральный латекс'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Полиизопрен'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Нитрил'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Винил'
+         })
+      </details>
+      <details class="form-aside__datails datails-form-aside">
+         <summary class="datails-form-aside__summary">
+            Назначение
+         </summary>
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Назначение 1'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Назначение 2'
+         })
+      </details>
+      <details class="form-aside__datails datails-form-aside">
+         <summary class="datails-form-aside__summary">
+            Пудра
+         </summary>
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Пудра 1'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Пудра 2'
+         })
+      </details>
+      <details class="form-aside__datails datails-form-aside">
+         <summary class="datails-form-aside__summary">
+            Цвет
+         </summary>
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Синий'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Зеленый'
+         })
+         @@include('./ui/checkboxInput.html', {
+         'value': 'Голубой'
+         })
+      </details>
+      <div class="form-aside__btn-block">
+         <button disabled class="form-aside__dark-btn-small dark-btn-small">Сбросить</button>
+         <button class="form-aside__dark-btn-small dark-btn-small">Применить</button>
+
+      </div>
+   </form>
+
+</aside>

@@ -1,0 +1,49 @@
+<form class="feature">
+   <h1 class="feature__title">Перчатки Latex examination</h1>
+   <h3 class="feature__subtitle">Характеристики</h3>
+   <div>
+      <p class="feature__text">Назначение <span>adipiscing eli</span></p>
+      <p class="feature__text">Количество в упаковке <span>100 шт.</span></p>
+      <p class="feature__text">Размеры <span>XS, S, M, L, XL</span></p>
+      <p class="feature__text">Материал <span>magnis dis parturient</span></p>
+      <p class="feature__text">Стерильность <span>consectetuer</span></p>
+      <p class="feature__text">Пудра <span>ligula</span></p>
+      <p class="feature__text">Цвет <span>parturient</span></p>
+      <p class="feature__text">Страна-производитель <span>USA</span></p>
+      <p class="feature__text">Срок годности <span>5 лет</span></p>
+   </div>
+   <div class="feature__bottom-block">
+      <div class="feature__btn-block">
+         @@include('./counterButtonBlock.html', {})
+         @@include('./greyInput.html', {
+         'text': 'Кол-во пар'
+         })
+         @@include('./greyInput.html', {
+         'text': 'Вес: Кг.'
+         })
+         @@include('./greyInput.html', {
+         'text': 'Обьем: М3'
+         })
+      </div>
+      <div class="feature__color-block color-block">
+         <p class="color-block__text">Цвет</p>
+         <div class="color-block__inner">
+            @@include('./colorInputRadio.html', {
+            'color': 'dark-blue'
+            })
+            @@include('./colorInputRadio.html', {
+            'color': 'blue'
+            })
+            @@include('./colorInputRadio.html', {
+            'color': 'green'
+            })
+            @@include('./colorInputRadio.html', {
+            'color': 'pink'
+            })
+         </div>
+      </div>
+      <a class="dark-btn-small" href="cart.html">Купить</a>
+      <!-- <button class="dark-btn-small">Купить</button> -->
+   </div>
+
+</form>

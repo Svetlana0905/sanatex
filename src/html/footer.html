@@ -1,0 +1,21 @@
+<footer class="footer">
+   <div class="nav-block">
+      <div class="logo-icon">
+         <a href><img src="./images/icons/logo.svg" alt="На главную страницу"></a>
+      </div>
+      @@include('./footerNavigation.html', {})
+   </div>
+   <div class="footer__contacts">
+      @@include('./socialBlock.html', {
+      'svg-telegram': './images/icons/telegram.svg',
+      'svg-watsap': './images/icons/watsap.svg'
+      })
+
+      <a class="footer__phone" href="tel:+79362937976">+7 (936) 293-79-76</a>
+      <div class="footer__phone-block phone-block">
+         <span class="phone-block__text @@color">Есть вопросы? Звоните</span>
+         <a class="phone-block__link @@color" href="tel:+78000000000">8 800 000 00 00 </a>
+      </div>
+   </div>
+
+</footer>

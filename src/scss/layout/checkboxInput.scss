@@ -1,0 +1,62 @@
+.checkbox {
+   @include flex-row;
+   justify-content: space-between;
+   position: relative;
+
+   &__text {
+      font-family: $mainFont;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: $fontColor80;
+   }
+
+   &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+   }
+
+   &__box {
+      position: absolute;
+      margin-top: 0.2em;
+      margin-left: -1em;
+      width: 18px;
+      height: 18px;
+      top: 5px;
+      right: 0;
+      background: rgba(232, 232, 232, 0.5);
+      border: 0.5px solid rgba(46, 65, 134, 0.09);
+      border-radius: 5px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      transition: $standartTrans;
+   }
+}
+
+.checkbox__input:checked+.checkbox__box::before {
+   top: 5px;
+   left: 1px;
+   position: absolute;
+   content: "";
+   width: 18px;
+   height: 18px;
+   background: url(../images/icons/check_mark_blue.svg) 50% no-repeat;
+}
+
+/* Focused */
+// .checkbox__input:focus+.checkbox__box {
+//    box-shadow: 0px 4px 8px 0px rgba(19, 29, 64, 0.7);
+// }
+
+/* Disabled */
+.checkbox__input:disabled+.checkbox__box {
+   box-shadow: 0 0 0 0.1em $checkInputBg;
+}
+
+.checkbox__input:checked:disabled+.checkbox__box {
+   background-color: $checkInputBg;
+}

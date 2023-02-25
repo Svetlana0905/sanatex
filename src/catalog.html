@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Каталог'
+})
+
+<body>
+   @@include('html/popup.html', {})
+   <div class="body">
+      <div class="body__inner catalog-page">
+
+         @@include('html/header.html', {
+         'style': 'white',
+         'logo': './images/icons/logo_white.svg',
+         'burger': 'burger-btn white',
+         'color-link': 'nav-link dark',
+         'color': 'dark',
+         'svg-telegram': './images/icons/telegram-dark.svg',
+         'svg-watsap': './images/icons/watsap-dark.svg'
+         })
+
+         @@include('html/ui/breadCrumbs.html', {
+         'link': 'Каталог'
+         })
+         <div class="catalog-page__wrapper">
+            @@include('html/sidebar.html', {})
+            <div class="catalog-page__body">
+               <h3 class="catalog-page__title">Выберите нужные перчатки</h3>
+               <div class="catalog-page__content">
+                  <div class="catalog-page__product">
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/1.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/2.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                     @@include('html/goodsItem.html', {
+                     'img': "./images/goods/3.svg"
+                     })
+                  </div>
+
+                  <p class="catalog-page__text">Вы также можете купить перчатки в розницу в нашем магазине <br>
+                     на <a href class="standart-link">маркетплейсе</a> </p>
+               </div>
+            </div>
+         </div>
+         @@include('html/form.html', {
+         'ls': 'ls-02'
+         })
+      </div>
+      @@include('html/footer.html', {})
+      @@include('html/script.html', {})
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<header class="header @@style">
+   <div class="nav-block">
+      <div class="logo-icon">
+         <a href><img src="@@logo" alt="На главную страницу"></a>
+      </div>
+      @@include('./navigation.html', {
+      'color-link': '@@color-link'
+      })
+   </div>
+
+   <div class="header__contacts contacts-header">
+      @@include('./socialBlock.html', {
+      'svg-telegram': '@@svg-telegram',
+      'svg-watsap': '@@svg-watsap'
+      })
+      <div class="contacts-header__phone-block phone-block">
+         <button class="phone-block__btn @@color">Для звоноков по РФ</button>
+         <a class="phone-block__link @@color" href="tel:+78000000000">8 800 000 00 00 </a>
+      </div>
+   </div>
+   <button class="@@burger"><span></span></button>
+</header>

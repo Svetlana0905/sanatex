@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts" 
+@import 'config/fonts';
+
+// Подключение sass функций и миксинов и рассширений стилей 
+@import 'config/functions';
+
+// Подключение переменных 
+@import 'config/vars';
+
+// Подключение миксинов 
+@import 'config/mixin';
+
+// Обнуление 
+@import 'config/reset';
+
+// Базовые размеры шрифтов
+@import 'config/typography';
+
+// Слайдеры
+@import 'libs/swiper';
+@import 'libs/sliderSwiper';
+@import 'libs/sliderProduct';
+
+// Подключение стилей отдельных блоков и секций 
+
+@import 'layout/checkboxInput';
+@import 'layout/buttons';
+@import 'layout/breadCrumbs';
+@import 'layout/links';
+@import 'layout/popup';
+@import 'layout/navigation';
+@import 'layout/inputs';
+@import 'layout/itemProduct';
+@import 'layout/firstScreen';
+@import 'layout/header';
+@import 'layout/popularGoods';
+@import 'layout/goodsBlock';
+@import 'layout/about';
+@import 'layout/quality';
+@import 'layout/questionsBlock';
+@import 'layout/form';
+@import 'layout/news';
+@import 'layout/footer';
+@import 'layout/contactPage';
+@import 'layout/newsPage';
+@import 'layout/articlePage';
+@import 'layout/productPage';
+@import 'layout/feature';
+@import 'layout/catalog';
+@import 'layout/sidebar';
+@import 'layout/cartPage';
+
+.body {
+   padding-bottom: 38px;
+   background: $grayColor;
+}
+
+.disable-scroll {
+   position: relative;
+   overflow: hidden;
+   height: 100vh;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+}

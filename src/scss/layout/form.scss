@@ -1,0 +1,78 @@
+.form-block {
+   @include flex-column;
+   max-width: 1204px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 39px 0 38px 10px;
+   border-radius: $borderRadius;
+   background: $barndColorBlue url(../images/firstScreen/1.png) 100% 50% no-repeat;
+
+   @include media(390) {
+      padding: 39px 0 38px 30px;
+   }
+
+   @include media(600) {
+      padding: 62px 0 70px 90px;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+
+      @include media(600) {
+         font-family: $mainFont;
+
+         font-weight: 700;
+         font-size: 48px;
+         line-height: 52px;
+         color: $whiteColor;
+         margin-bottom: 16px;
+      }
+
+      &.ls-02 {
+         letter-spacing: 0px; // отменено для главной страницы
+      }
+   }
+
+   & .form-text {
+      width: 211px;
+      font-family: $mainFont;
+      font-weight: 400;
+      max-width: 482px;
+      margin-bottom: 22px;
+      font-size: 14px;
+      line-height: 20px;
+
+      @include media(600) {
+         margin-bottom: 51px;
+         width: 100%;
+         font-size: 18px;
+         line-height: 30px;
+         color: $whiteColor80;
+      }
+   }
+}
+
+.form-questions {
+   @include flex-row;
+   flex-wrap: wrap;
+   gap: 20px;
+
+   @include media (600) {
+      gap: 22px;
+   }
+
+   & .dark-button {
+      padding: 18px 55px;
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+
+      @include media(600) {
+         padding: 0 29px;
+         height: 59px;
+      }
+   }
+}

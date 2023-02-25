@@ -1,0 +1,75 @@
+.navigation-header {
+   @include flex-column;
+   align-items: center;
+   gap: 45px;
+   right: -100%;
+   width: 0;
+   height: 0;
+   transform: scale(0);
+   overflow: auto;
+   padding: 70px 10px 20px 10px;
+   z-index: 10;
+   transition: all 0.3s ease 0s;
+
+   &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      background-color: $barndColorBlue;
+
+      & .dark {
+         color: $whiteColor;
+      }
+   }
+
+   @include media(910) {
+      transform: scale(1);
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+   }
+
+   & .logo-icon,
+   & .phone-block__text {
+      display: block;
+
+      @include media(910) {
+         display: none
+      }
+   }
+
+   &__body {
+      @include flex-column;
+      align-items: center;
+      width: 100%;
+      gap: 30px;
+
+      @include media(910) {
+         @include flex-row;
+         gap: 10px;
+         padding-left: 15px;
+      }
+
+      @include media(1122) {
+         gap: 0;
+         padding-left: 42px;
+      }
+   }
+}
+
+.logo-icon img {
+   width: 81px;
+   height: 44.19px;
+
+   @include media(600) {
+      width: 133px;
+      height: 44px;
+   }
+}

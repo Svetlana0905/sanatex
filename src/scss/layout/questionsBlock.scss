@@ -1,0 +1,138 @@
+.questions {
+   width: 100%;
+   background: $whiteColor;
+
+   @include media(600) {
+      background: $grayColor;
+   }
+
+   &__container {
+      @include flex-column;
+      align-items: center;
+      max-width: 1244px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px 102px;
+
+      @include media(600) {
+         padding: 97px 20px 103px;
+      }
+   }
+
+   & .secondary-button {
+      margin-bottom: 25px;
+   }
+
+   & .subtitle1 {
+      margin-bottom: 41px;
+   }
+
+   &__details-block {
+      @include flex-column;
+      width: 100%;
+      margin-bottom: 55px;
+
+      @include media(600) {
+         margin-bottom: 150px;
+      }
+   }
+}
+
+details {
+   display: block;
+   background: $grayColor;
+   width: 100%;
+   overflow: hidden;
+   font-family: $otherFont;
+   border-bottom: $borderSummary;
+
+   & p {
+      font-family: $otherFont;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $fontColor80;
+   }
+}
+
+summary {
+   position: relative;
+   display: block;
+   padding: 29px 40px 29px 17px;
+   font-family: $otherFont;
+   font-weight: 600;
+   font-size: var(--typography-body4);
+   line-height: 24px;
+   color: $fontColor80;
+   cursor: pointer;
+
+   &::before,
+   &::after {
+      transition: transform .5s;
+   }
+
+   &:before {
+      top: 24px;
+      right: 16px;
+      @include round-btn-before;
+   }
+
+   &::after {
+      top: 29px;
+      right: 22px;
+      @include round-btn-after;
+   }
+}
+
+details[open]>summary:before {
+   transform: scale(1, -1);
+}
+
+details[open]>summary {
+   color: $barndColorBlue;
+   border-bottom: 0;
+   border-radius: 15px;
+   background: $borderColorSummary;
+   transition: $standartTrans;
+
+   &:before {
+      background: $fontTitleColor;
+   }
+
+   &::after {
+      top: 31px;
+      right: 21px;
+      transform: rotate(-45deg);
+   }
+}
+
+details[open] summary~* {
+   animation: sweep .5s ease-in-out;
+   padding: 37px 17px;
+}
+
+summary::-webkit-details-marker {
+   display: none;
+}
+
+summary::-moz-list-bullet {
+   list-style-type: none;
+}
+
+summary::marker {
+   display: none;
+}
+
+@keyframes sweep {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+summary:focus {
+   outline: 0;
+}

@@ -1,0 +1,82 @@
+.quality {
+   width: 100%;
+   background: $whiteColor;
+
+   &__container {
+      @include flex-column;
+      align-items: center;
+      max-width: 1312px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 100px 16px;
+   }
+
+   & .secondary-button {
+      margin-bottom: 23px;
+   }
+
+   & .subtitle1 {
+      margin-bottom: 70px;
+      color: $fontTitleColor;
+   }
+
+   &__sertificate {
+      @include flex-row;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+   }
+}
+
+.sertificate {
+   &__item {
+      @include flex-column;
+      gap: 20px;
+      padding: 21px 21px 32px;
+      border-radius: $borderRadius;
+      background: $bgColorBlue;
+
+      &:first-child,
+      &:nth-child(4) {
+         width: 473px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+         width: 404px;
+      }
+   }
+
+   &__img-inner {
+      display: flex;
+      justify-content: center;
+      background: $whiteColor;
+      padding: 16px 25px;
+      border-radius: $borderRadius;
+      height: 264px;
+
+      & img {
+         height: 100%;
+         width: 100%;
+         object-fit: fill;
+         align-self: center;
+      }
+   }
+
+   &__content {
+      @include flex-column;
+      align-items: start;
+      padding-left: 6px;
+
+      & .small-text {
+         color: $fontTextColor;
+         text-align: start;
+      }
+
+      & .sertificate-title {
+         margin-bottom: 10px;
+      }
+   }
+}

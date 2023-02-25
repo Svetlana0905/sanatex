@@ -1,0 +1,203 @@
+:root {
+   --typography-subtitle28-64: 28px; //!
+   --typography-title: 24px;
+   --typography-body1: 13px;
+   --typography-body2: 14px;
+   --typography-body3: 13px; //!
+   --typography-body14-18: 14px;
+   --typography-subtitle28-32: 28px;
+
+}
+
+@media (min-width: 768px) {
+   :root {
+      --typography-subtitle28-64: 54px; //!
+      --typography-title: 36px;
+      --typography-body1: 18px;
+      --typography-body2: 14px;
+      --typography-body3: 20px; //!
+   }
+}
+
+@media (min-width: 1024px) {
+   :root {
+      --typography-subtitle28-64: 64px; //!
+      --typography-title: 48px;
+      --typography-subtitle28-32: 32px;
+      --typography-body1: 22px;
+      --typography-body2: 14px;
+      --typography-body3: 24px; //!
+      --typography-body4: 20px;
+      --typography-body14-18: 18px;
+      --typography-standart: 16px;
+   }
+}
+
+.popup-title {
+   font-family: $mainFont;
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 42px;
+   text-align: center;
+   color: $whiteColor;
+
+   @include media(600) {
+      font-size: 48px;
+      line-height: 56px;
+   }
+}
+
+.title {
+   font-family: $mainFont;
+   font-style: normal;
+   font-weight: 500;
+   font-size: var(--typography-title);
+   line-height: 28px;
+   color: $whiteColor;
+
+   & span {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: var(--typography-title);
+      line-height: 28px;
+      color: $whiteColor;
+   }
+
+   @include media(600) {
+      line-height: 56px;
+
+      & span {
+         line-height: 56px;
+      }
+   }
+}
+
+.subtitle1 {
+   font-family: $mainFont;
+   font-weight: 700;
+   font-size: var(--typography-subtitle28-64);
+   line-height: 30px;
+   text-align: center;
+   color: $fontTitleColor;
+
+   @include media(600) {
+      line-height: 65px;
+      color: $barndColorBlue;
+   }
+}
+
+.title-news-item {
+   font-weight: 600;
+   font-size: 18.2768px;
+   line-height: 21px;
+   color: $whiteColor;
+
+   @include media(600) {
+      font-size: 20px;
+      line-height: 23px;
+   }
+}
+
+.subtitle-news {
+   font-size: var(--typography-subtitle28-32);
+   font-family: $mainFont;
+   font-weight: 700;
+   color: $fontTitleColor;
+   line-height: 38px;
+
+   @include media(600) {
+      line-height: 33px;
+   }
+}
+
+.text-body1 {
+   font-family: $secondaryFontFamily;
+   font-style: normal;
+   font-weight: 400;
+   font-size: var(--typography-body3);
+   line-height: 146%;
+
+   @include media(600) {
+
+      line-height: 146%;
+   }
+}
+
+.form-text {
+   font-size: var(--typography-body14-18);
+   font-family: $mainFont;
+   font-weight: 400;
+   line-height: 167%;
+   color: $whiteColor80;
+}
+
+.text-body3 {
+   font-size: var(--typography-body3);
+   font-family: $mainFont;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 162%;
+   color: $fontTextColor;
+
+   & span {
+      font-weight: 700;
+      color: $fontTitleColor;
+   }
+}
+
+.sertificate-title {
+   font-family: $mainFont;
+   font-style: normal;
+   font-weight: 700;
+   font-size: var(--typography-body3);
+   line-height: 28px;
+   text-align: center;
+   color: $fontColor;
+}
+
+.small-text {
+   font-family: $mainFont;
+   font-weight: 400;
+   font-size: var(--typography-body2);
+   line-height: 16px;
+   text-align: center;
+   color: $barndColorBlue;
+}
+
+.quantity,
+.size {
+   position: relative;
+   font-family: $mainFont;
+   font-style: normal;
+   font-weight: 300;
+   font-size: var(--typography-body2);
+   line-height: 16px;
+   text-align: center;
+   color: $fontColor80;
+
+   &::before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 0;
+   }
+}
+
+.quantity {
+   padding-left: 27px;
+
+   &::before {
+      background: url(./images/icons/packingsvg.svg);
+   }
+}
+
+.size {
+   padding-left: 27px;
+
+   &::before {
+      background: url(./images/icons/gloves.svg);
+   }
+}
