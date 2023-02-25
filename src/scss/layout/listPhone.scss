@@ -1,0 +1,47 @@
+.list-phone {
+   position: absolute;
+   opacity: 1;
+   top: 5px;
+   right: 17px;
+   @include flex-column;
+   align-items: center;
+   gap: 12px;
+   width: 222px;
+   background: $whiteColor;
+   padding: 5px 35px 18px;
+   border-radius: $borderRadius;
+   z-index: 0;
+   transition: $standartTrans;
+
+   &__bg {
+      width: 212px;
+      height: 72px;
+      margin-bottom: 7px;
+      border-radius: $borderRadius;
+      background: $fontTitleColor;
+   }
+
+   &__item {
+      @include flex-column;
+      align-items: center;
+      gap: 2px;
+      font-family: $mainFont;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: $fontTitleColor;
+   }
+
+   &__phone {
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      color: $fontTitleColor;
+   }
+
+   &.hidden {
+      opacity: 0;
+      clip: rect(0 0 0 0);
+   }
+}

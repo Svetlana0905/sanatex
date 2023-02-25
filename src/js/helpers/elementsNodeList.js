@@ -6,6 +6,8 @@ const closePopUp = document.querySelector('.popup__btn-close')
 const burgerBtn = document.querySelector('.burger-btn')
 const headerMenu = document.querySelector('.navigation-header')
 const swiperWrapper = document.querySelector('.swiper-wrapper')
+const listPhone = document.querySelector('.list-phone')
+const phoneHeaderButton = document.querySelector('.phone-block__btn')
 
 
 
@@ -17,5 +19,7 @@ export {
   closePopUp,
   burgerBtn,
   headerMenu,
-  swiperWrapper
+  swiperWrapper,
+  listPhone,
+  phoneHeaderButton
 }

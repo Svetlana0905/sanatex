@@ -58,13 +58,13 @@ details {
 summary {
    position: relative;
    display: block;
-   padding: 29px 40px 29px 17px;
+   padding: 29px 39px 29px 12px;
    font-family: $otherFont;
    font-weight: 600;
-   font-size: var(--typography-body4);
    line-height: 24px;
-   color: $fontColor80;
    cursor: pointer;
+   font-size: 16px;
+   color: $fontColor;
 
    &::before,
    &::after {
@@ -72,15 +72,32 @@ summary {
    }
 
    &:before {
-      top: 24px;
+      top: 39px;
       right: 16px;
       @include round-btn-before;
    }
 
    &::after {
-      top: 29px;
+      top: 44px;
       right: 22px;
       @include round-btn-after;
+   }
+
+   @include media(600) {
+      font-size: var(--typography-body4);
+      line-height: 24px;
+      color: $fontColor80;
+      padding: 29px 40px 29px 17px;
+
+      &:before {
+         top: 24px;
+         right: 16px;
+      }
+
+      &::after {
+         top: 29px;
+         right: 22px;
+      }
    }
 }
 
@@ -100,9 +117,15 @@ details[open]>summary {
    }
 
    &::after {
-      top: 31px;
+      top: 45px;
       right: 21px;
       transform: rotate(-45deg);
+   }
+
+   @include media(600) {
+      &::after {
+         top: 31px;
+      }
    }
 }
 

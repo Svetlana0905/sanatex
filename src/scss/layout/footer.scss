@@ -112,7 +112,7 @@
       color: $whiteColor;
 
       @include media (600) {
-         font-family: 'Montserrat';
+         font-family: $secondaryFontFamily;
          font-style: normal;
          font-weight: 700;
          font-size: 22px;

@@ -1,4 +1,14 @@
-import { html, body, popUp, openPopUp, closePopUp, burgerBtn, headerMenu } from './../helpers/elementsNodeList'
+import {
+  html,
+  body,
+  popUp,
+  openPopUp,
+  closePopUp,
+  burgerBtn,
+  headerMenu,
+  listPhone,
+  phoneHeaderButton
+} from './../helpers/elementsNodeList'
 
 // logger (Full Logging System) 
 function FLS(message) {
@@ -22,6 +32,15 @@ function isWebp() {
     FLS(support ? 'webp поддерживается' : 'webp не поддерживается')
   })
 }
+
+// Phone
+let openPhoneHeader = function () {
+  phoneHeaderButton.addEventListener('click', function () {
+    console.log('hhhhhhhhhhhhh')
+    listPhone.classList.toggle('hidden')
+  })
+}
+
 // Popup
 let disableScroll = function () {
   let paddingOffset = window.innerWidth - body.offsetWidth + 'px';
@@ -51,14 +70,11 @@ function openPopUpActions() {
   }
 }
 
-
 popUp.addEventListener('click', (e) => {
   if (e.target == popUp) {
     popUp.classList.remove('active');
   }
 });
-
-
 
 function closePopUpActions() {
   closePopUp.addEventListener('click', function (e) {
@@ -81,4 +97,5 @@ export {
   isWebp,
   openPopUpActions,
   closePopUpActions,
+  openPhoneHeader
 }

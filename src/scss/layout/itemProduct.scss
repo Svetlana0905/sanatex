@@ -11,9 +11,9 @@
       @include flex-row;
       max-width: 367px;
       width: 100%;
-      height: 380px;
+      max-height: 380px;
       border-radius: $borderRadius;
-      background: $bglightGray;
+      background: rgba(251, 251, 251);
       margin-bottom: 15px;
    }
 
@@ -51,6 +51,7 @@
       text-align: center;
       color: $whiteColor;
       padding-left: 25px;
+      z-index: 100;
 
       &::after {
          position: absolute;
@@ -59,7 +60,7 @@
          height: 18px;
          top: 5px;
          left: 4px;
-         background: url(../../images/icons/packing.svg);
+         background: url(../images/icons/packing.svg);
       }
    }
 
@@ -81,7 +82,7 @@
          height: 18px;
          top: -3px; //! для каталога
          left: 0;
-         background: url(../../images/icons/gloves.svg);
+         background: url(../images/icons/gloves.svg);
       }
    }
 }

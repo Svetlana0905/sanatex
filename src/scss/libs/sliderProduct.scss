@@ -5,7 +5,7 @@
    max-width: 674px;
    width: 100%;
    height: fit-content;
-   padding: 25px 50px 0;
+   padding: 25px 0 0;
    background: $bglightGray;
    border-radius: $borderRadius;
 
@@ -25,18 +25,18 @@
       box-sizing: content-box;
    }
 
-   & .swiper-slide {
+   &__small-slider,
+   &__big-slider {
       position: relative;
       flex-shrink: 0;
-
       transition-property: transform;
       background: rgb(248, 248, 248);
       margin-bottom: 45px;
+      border-radius: $borderRadius;
 
       @include media (926) {
          margin-bottom: 88px;
       }
-
 
       & img {
          max-width: 617px;
@@ -44,6 +44,21 @@
          object-fit: cover;
          display: block;
          margin: 0 auto;
+      }
+   }
+
+   &__small-slider {
+      background: rgba(251, 251, 251);
+      margin-bottom: 45px;
+
+      & img {
+         border-radius: 20px;
+         background: rgba(251, 251, 251);
+         width: 100%;
+
+         @include media (600) {
+            width: 70%;
+         }
       }
    }
 

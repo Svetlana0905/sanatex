@@ -1,7 +1,12 @@
 <div class="item-product">
    <span class="item-product__quantity">100шт/Уп</span>
    <div class="item-product__inner-img">
-      <img class="item-product__img" src=@@img alt="Перчатки нитриловые">
+      @@include('./ui/sliderProduct.html', {
+      'slide1': './images/goods/1.svg',
+      'slide2': './images/goods/2.svg',
+      'slide3': './images/goods/3.svg',
+      'style': 'small-slider'
+      })
    </div>
    <div class="item-product__content">
       <p class="item-product__title">Перчатки нитриловые</p>
