@@ -2171,7 +2171,7 @@ img {
   height: 14px;
   top: 1px;
   right: 22px;
-  background: url(./images/icons/blue_ruond_arrow.svg) center/cover;
+  background: url(../images/icons/blue_ruond_arrow.svg) center/cover;
 }
 
 .phone-block__btn.dark {
