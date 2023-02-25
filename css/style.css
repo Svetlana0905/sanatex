@@ -786,7 +786,7 @@ img {
   content: "";
   width: 18px;
   height: 18px;
-  background: url(../images/icons/check_mark_blue.svg) 50% no-repeat;
+  background: url(./images/icons/check_mark_blue.svg) 50% no-repeat;
 }
 
 /* Focused */
@@ -1281,7 +1281,7 @@ img {
   height: 25px;
   top: -3px;
   right: 0;
-  background: url(../../images/icons/blue_ruond_arrow.svg) 50%/cover no-repeat;
+  background: url(./images/icons/blue_ruond_arrow.svg) 50%/cover no-repeat;
   -webkit-transition: all 700ms ease-in-out 0ms;
   -o-transition: all 700ms ease-in-out 0ms;
   transition: all 700ms ease-in-out 0ms;
@@ -1330,7 +1330,7 @@ img {
   top: 2px;
   width: 15px;
   height: 15px;
-  background: url(../../images/icons/gray_round_arrow.svg) center/cover;
+  background: url(./images/icons/gray_round_arrow.svg) center/cover;
 }
 
 .link-bread-crumbs {
@@ -1355,7 +1355,7 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 100%;
-  background: url(../../images/icons/svg_round_gray_prev.svg);
+  background: url(./images/icons/svg_round_gray_prev.svg);
 }
 
 .popup {
@@ -1804,7 +1804,7 @@ img {
   content: "";
   width: 18px;
   height: 18px;
-  background: url(../images/icons/color_check.svg) 50% no-repeat;
+  background: url(./images/icons/color_check.svg) 50% no-repeat;
 }
 
 /* Focused */
@@ -1901,7 +1901,7 @@ img {
   height: 18px;
   top: 5px;
   left: 4px;
-  background: url(../../images/icons/packing.svg);
+  background: url(./images/icons/packing.svg);
 }
 
 .item-product__size {
@@ -1923,7 +1923,7 @@ img {
   height: 18px;
   top: -3px;
   left: 0;
-  background: url(../../images/icons/gloves.svg);
+  background: url(./images/icons/gloves.svg);
 }
 
 .first-screen {
@@ -2171,7 +2171,7 @@ img {
   height: 14px;
   top: 1px;
   right: 22px;
-  background: url(../../images/icons/blue_ruond_arrow.svg) center/cover;
+  background: url(./images/icons/blue_ruond_arrow.svg) center/cover;
 }
 
 .phone-block__btn.dark {
@@ -2593,7 +2593,7 @@ summary:focus {
 }
 
 .no-webp .form-block {
-  background: rgb(19, 29, 64) url(../images/firstScreen/1.png) 100% 50% no-repeat; }
+  background: rgb(19, 29, 64) url(./images/firstScreen/1.png) 100% 50% no-repeat; }
 
 .form-block {
   display: -webkit-box;
@@ -3811,7 +3811,7 @@ summary:focus {
   height: 18px;
   top: 7px;
   left: 8px;
-  background: url(../images/icons/add_product.svg) no-repeat;
+  background: url(./images/icons/add_product.svg) no-repeat;
 }
 
 .round-btn-add:hover,
@@ -3827,7 +3827,7 @@ summary:focus {
 .round-btn-delete::after {
   top: 10px;
   left: 10px;
-  background: url(../images/icons/delete_product.svg) no-repeat;
+  background: url(./images/icons/delete_product.svg) no-repeat;
 }
 
 .body {
@@ -4679,4 +4679,4 @@ summary:focus {
   }
 }
 
-.webp .form-block { background: rgb(19, 29, 64) url(../images/firstScreen/1.webp) 100% 50% no-repeat; }
+.webp .form-block { background: rgb(19, 29, 64) url(./images/firstScreen/1.webp) 100% 50% no-repeat; }
