@@ -3570,11 +3570,7 @@ summary:focus {
   max-width: 270px;
 }
 
-.catalog-page__product .item-product__inner-img {
-  height: 253px;
-}
-
-.catalog-page__ .catalog-page__title {
+.catalog-page__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
