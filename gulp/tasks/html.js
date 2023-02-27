@@ -14,12 +14,12 @@ export const html = () => {
     .pipe(fileinclude())
     .pipe(app.plugins.replace(/@img\//g, 'images/'))
     .pipe(app.plugins.if(app.isBuild, webpHtml()))
-    .pipe(htmlMin({
-      useShortDoctype: true,
-      sortClassName: true,
-      collapseWhitespace: app.isBuild,
-      removeComments: app.isBuild
-    }))
+    // .pipe(htmlMin({
+    //   useShortDoctype: true,
+    //   sortClassName: true,
+    //   collapseWhitespace: app.isBuild,
+    //   removeComments: app.isBuild
+    // }))
     .pipe(app.plugins.if(app.isBuild, versionNumber({
       'value': '%DT%',
       'append': {

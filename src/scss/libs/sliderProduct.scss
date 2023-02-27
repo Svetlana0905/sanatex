@@ -6,7 +6,7 @@
    width: 100%;
    height: fit-content;
    padding: 25px 0 0;
-   background: $bglightGray;
+   background: $bgSlider1;
    border-radius: $borderRadius;
 
 
@@ -30,7 +30,7 @@
       position: relative;
       flex-shrink: 0;
       transition-property: transform;
-      background: rgb(248, 248, 248);
+      background: $bgSlider1;
       margin-bottom: 45px;
       border-radius: $borderRadius;
 
@@ -48,12 +48,10 @@
    }
 
    &__small-slider {
-      background: rgba(251, 251, 251);
-      margin-bottom: 45px;
 
       & img {
          border-radius: 20px;
-         background: rgba(251, 251, 251);
+         background: $bgSlider1;
          width: 100%;
 
          @include media (600) {
@@ -63,15 +61,13 @@
    }
 
    &__swiper-pagination {
+      position: absolute;
       @include flex-row;
       justify-content: space-between;
       margin: 0 auto;
       width: 100%;
       height: 28px;
-
-      @include media (926) {
-         height: 62px;
-      }
+      bottom: 0;
    }
 }
 

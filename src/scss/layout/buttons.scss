@@ -141,7 +141,7 @@
    color: $whiteColor;
    background: $fontTitleColor;
    border-radius: $borderRadius;
-   border: 1px solid $fontTitleColor;
+   border: 1px solid transparent;
    transition: $standartTrans;
 
    &:hover {

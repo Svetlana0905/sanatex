@@ -1,10 +1,13 @@
 .product-page {
-   margin-bottom: 148px;
+   margin-bottom: 55px;
+
+   @include media (926) {
+      margin-bottom: 148px;
+   }
 
    &__content {
       @include flex-column;
       gap: 53px;
-      margin-bottom: 55px;
       min-width: 0;
 
       @include media (926) {
@@ -54,14 +57,15 @@
 
    &__goods-bottom-block {
       display: none;
+      justify-content: space-between;
+      gap: 40px;
+      margin: 0 auto;
 
       @include media (600) {
          @include flex-row;
-         justify-content: space-between;
-         gap: 40px;
+         flex-wrap: wrap;
          max-width: 1229px;
          width: 100%;
-         margin: 0 auto;
       }
    }
 }
