@@ -79,11 +79,10 @@
    font-size: var(--typography-subtitle28-64);
    line-height: 30px;
    text-align: center;
-   color: $fontTitleColor;
+   color: $barndColorBlue;
 
    @include media(600) {
       line-height: 65px;
-      color: $barndColorBlue;
    }
 }
 
@@ -132,12 +131,16 @@
 }
 
 .text-body3 {
-   font-size: var(--typography-body3);
+   font-size: 14px;
    font-family: $mainFont;
-   font-style: normal;
    font-weight: 400;
-   line-height: 162%;
+   line-height: 22px;
    color: $fontTextColor;
+
+   @include media(600) {
+      font-size: 24px;
+      line-height: 162%;
+   }
 
    & span {
       font-weight: 700;

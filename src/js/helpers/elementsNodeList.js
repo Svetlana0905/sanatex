@@ -8,6 +8,7 @@ const headerMenu = document.querySelector('.navigation-header')
 const swiperWrapper = document.querySelector('.swiper-wrapper')
 const listPhone = document.querySelector('.list-phone')
 const phoneHeaderButton = document.querySelector('.phone-block__btn')
+const phoneLink = document.querySelector('.phone-block__link')
 
 
 
@@ -21,5 +22,6 @@ export {
   headerMenu,
   swiperWrapper,
   listPhone,
-  phoneHeaderButton
+  phoneHeaderButton,
+  phoneLink
 }

@@ -14,7 +14,11 @@
       max-height: 380px;
       border-radius: $borderRadius;
       background: rgba(251, 251, 251);
-      margin-bottom: 15px;
+      margin-bottom: 23px;
+
+      @include media(600) {
+         margin-bottom: 15px;
+      }
    }
 
    &__img {
@@ -51,7 +55,7 @@
       text-align: center;
       color: $whiteColor;
       padding-left: 25px;
-      z-index: 100;
+      z-index: 6;
 
       &::after {
          position: absolute;
@@ -72,8 +76,12 @@
       font-size: 12px;
       line-height: 14px;
       color: $fontTextColor;
-      margin-bottom: 26px; //было 23, изменено для главной страницы
-      padding-left: 25px;
+      margin-bottom: 24px; //было 23, изменено для главной страницы
+      padding-left: 24px;
+
+      @include media(600) {
+         margin-bottom: 26px; //было 23, изменено для главной страницы
+      }
 
       &::before {
          position: absolute;

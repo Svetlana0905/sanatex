@@ -16,7 +16,7 @@
    }
 
    @include media(1074) {
-      padding: 35px 89px 37px 103px;
+      padding: 35px 89px 35px 100px;
       gap: 25px;
    }
 
@@ -59,6 +59,7 @@
 
       @include media(998) {
          @include flex-row;
+         gap: 0px;
       }
    }
 
@@ -102,7 +103,6 @@
    }
 
    & .phone-block__link {
-
       font-family: $mainFont;
       font-style: normal;
       font-weight: 400;

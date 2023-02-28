@@ -1,8 +1,27 @@
+.product {
+   max-width: 1296px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 25px 18px 0;
+   margin-bottom: 44px;
+   background: $grayColor;
+
+   @include media(427) {
+      margin-bottom: 100px;
+      padding: 74px 20px 0;
+   }
+
+   & .header {
+      max-width: 1256px;
+      margin-bottom: 14px;
+   }
+}
+
 .product-page {
    margin-bottom: 55px;
 
    @include media (926) {
-      margin-bottom: 148px;
+      margin-bottom: 150px;
    }
 
    &__content {
@@ -14,7 +33,7 @@
          @include flex-row;
          justify-content: space-between;
          gap: 53px;
-         margin-bottom: 37px;
+         margin-bottom: 45px;
       }
    }
 

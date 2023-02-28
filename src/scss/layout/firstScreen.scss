@@ -59,7 +59,7 @@
 
    &__text {
       color: $whiteColor;
-      margin-bottom: 50px;
+      margin-bottom: 53px;
 
       @include media(764) {
          margin-bottom: 72px;
@@ -83,7 +83,7 @@
    &__right {
       width: 243px;
       height: 100%;
-      background: $whiteColor;
+      background: $grayColor;
       border-radius: 42px;
       display: none;
 

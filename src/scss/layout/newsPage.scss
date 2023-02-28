@@ -13,19 +13,31 @@
       max-width: 1184px;
       width: 100%;
       margin: 0 auto;
-      margin-bottom: 153px;
+      margin-bottom: 50px;
+
+      @include media(600) {
+         margin-bottom: 153px;
+      }
    }
 
    & .header {
       margin-bottom: 15px;
    }
 
-   & h1 {
-      margin-bottom: 30px;
+   &__title {
+      margin-bottom: 33px;
+      font-family: $mainFont;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 33px;
       text-align: center;
+      color: $fontColor;
 
       @include media(600) {
-         text-align: start
+         margin-bottom: 30px;
+         text-align: start;
+         font-size: 32px;
+         line-height: 38px;
       }
    }
 
@@ -37,8 +49,18 @@
       gap: 17px;
 
       & .news-item {
+         position: relative;
          max-width: 383px;
          width: 100%;
+      }
+
+      & .news-item__content {
+         position: absolute;
+         bottom: 36px;
+
+         @include media(600) {
+            bottom: 34px;
+         }
       }
    }
 
@@ -47,6 +69,10 @@
    }
 
    & .form-block {
-      margin-bottom: 100px;
+      margin-bottom: 46px;
+
+      @include media(600) {
+         margin-bottom: 100px;
+      }
    }
 }

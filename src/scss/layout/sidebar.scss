@@ -3,9 +3,13 @@
    max-width: 316px;
    width: 100%;
    height: fit-content;
-   padding: 35px 23px;
+   padding: 35px 0;
    border-radius: $borderRadius;
-   border: 1px solid rgba(19, 29, 64, 0.1);
+
+   @include media(600) {
+      padding: 35px 23px;
+      border: 1px solid rgba(19, 29, 64, 0.1);
+   }
 
    &__title {
       font-weight: 700;
@@ -30,7 +34,12 @@
    &__btn-block {
       @include flex-row;
       gap: 16px;
-      padding-top: 30px;
+
+      // padding-top: 30px;
+      @include media(600) {
+         gap: 13px;
+         padding-top: 29px;
+      }
    }
 
    &__dark-btn-small {

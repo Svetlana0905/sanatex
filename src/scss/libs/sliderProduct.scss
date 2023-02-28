@@ -9,10 +9,8 @@
    background: $bgSlider1;
    border-radius: $borderRadius;
 
-
    @include media (926) {
       height: inherit;
-      padding: 25px 50px 0;
       padding: 86px 10px 0;
    }
 
@@ -47,7 +45,12 @@
       }
    }
 
-   &__small-slider {
+   &.small-slider {
+      padding: 25px 10px 0;
+
+      @include media (600) {
+         padding: 71px 10px 0;
+      }
 
       & img {
          border-radius: 20px;
@@ -55,8 +58,12 @@
          width: 100%;
 
          @include media (600) {
-            width: 70%;
+            width: 80%;
          }
+      }
+
+      & .swiper-pagination {
+         bottom: 0;
       }
    }
 
@@ -64,26 +71,19 @@
       position: absolute;
       @include flex-row;
       justify-content: space-between;
+      width: 60%;
       margin: 0 auto;
-      width: 100%;
       height: 28px;
-      bottom: 0;
-   }
-}
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-   padding: 0 28px;
-
-   @include media(600) {
-      padding: 0 81px;
+      bottom: 20px;
+      z-index: 2;
+      transform: translate(30%, 0%);
    }
 }
 
 .swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
    position: relative;
-   width: 25%;
+   width: 28%;
    height: 100%;
    background: transparent;
    cursor: pointer;

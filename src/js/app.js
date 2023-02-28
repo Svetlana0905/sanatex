@@ -1,4 +1,4 @@
-import { isWebp, openPopUpActions, closePopUpActions, openPhoneHeader } from './modules'
+import { isWebp, closePopUpActions, openPhoneHeader } from './modules'
 import Swiper, { Pagination, Mousewheel, Keyboard, EffectFlip, EffectFade } from 'swiper';
 
 const swiper = new Swiper('.swiper', {
@@ -55,7 +55,7 @@ const swiperProduct = new Swiper('.slider1', {
 
 
 isWebp();
-openPopUpActions();
+// openPopUpActions();
 closePopUpActions()
 openPhoneHeader()
 

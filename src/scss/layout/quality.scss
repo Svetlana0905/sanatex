@@ -8,16 +8,30 @@
       max-width: 1312px;
       width: 100%;
       margin: 0 auto;
-      padding: 100px 16px;
+      padding: 55px 16px 55px;
+
+      @include media (600) {
+         padding: 100px 16px;
+      }
    }
 
    & .secondary-button {
-      margin-bottom: 23px;
+      margin-bottom: 10px;
+
+      @include media (600) {
+         margin-bottom: 23px;
+      }
    }
 
    & .subtitle1 {
-      margin-bottom: 70px;
+      margin-bottom: 32px;
+      line-height: 35px;
       color: $fontTitleColor;
+
+      @include media (600) {
+         line-height: 65px;
+         margin-bottom: 70px;
+      }
    }
 
    &__sertificate {

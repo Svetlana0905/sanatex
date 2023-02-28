@@ -15,16 +15,24 @@
       padding: 0 20px 102px;
 
       @include media(600) {
-         padding: 97px 20px 103px;
+         padding: 97px 20px 105px;
       }
    }
 
    & .secondary-button {
-      margin-bottom: 25px;
+      margin-bottom: 12px;
+
+      @include media(600) {
+         margin-bottom: 25px;
+      }
    }
 
    & .subtitle1 {
-      margin-bottom: 41px;
+      margin-bottom: 9px;
+
+      @include media(600) {
+         margin-bottom: 41px;
+      }
    }
 
    &__details-block {
@@ -61,7 +69,7 @@ summary {
    padding: 29px 39px 29px 12px;
    font-family: $otherFont;
    font-weight: 600;
-   line-height: 24px;
+   line-height: 19px;
    cursor: pointer;
    font-size: 16px;
    color: $fontColor;

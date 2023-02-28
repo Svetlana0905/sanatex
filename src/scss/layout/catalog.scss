@@ -2,7 +2,11 @@
    max-width: 1308px;
    width: 100%;
    margin: 0 auto;
-   padding: 75px 26px 0;
+   padding: 25px 26px 0;
+
+   @include media(700) {
+      padding: 75px 26px 0;
+   }
 
    & .form-block {
       margin-bottom: 100px
@@ -59,8 +63,17 @@
       gap: 33px;
       margin-bottom: 50px;
 
+      @include media(500) {
+         gap: 20px;
+      }
+
       & .item-product {
          max-width: 270px;
+         padding: 8px 8px 0;
+      }
+
+      & .small-slider {
+         padding-top: 10px;
       }
    }
 

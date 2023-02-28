@@ -1,7 +1,7 @@
 .navigation-header {
-   @include flex-column;
+   @include flex-row;
    align-items: center;
-   gap: 45px;
+   gap: 0;
    right: -100%;
    width: 0;
    height: 0;
@@ -11,7 +11,36 @@
    z-index: 10;
    transition: all 0.3s ease 0s;
 
+   &__logo {
+      width: 0;
+      height: 0;
+   }
+
+   &__list {
+      width: 0;
+      height: 0;
+   }
+
+   &__body {
+      @include flex-column;
+      align-items: center;
+      width: 100%;
+      gap: 14px;
+
+      @include media(910) {
+         @include flex-row;
+         gap: 10px;
+         padding-left: 15px;
+      }
+
+      @include media(1122) {
+         gap: 0;
+         padding-left: 42px;
+      }
+   }
+
    &.active {
+      @include flex-column;
       position: fixed;
       top: 0;
       left: 0;
@@ -19,9 +48,41 @@
       height: 100%;
       transform: scale(1);
       background-color: $barndColorBlue;
+      z-index: 15;
 
       & .dark {
          color: $whiteColor;
+      }
+
+      .navigation-header__body {
+         margin-bottom: 41px;
+      }
+
+      .navigation-header__logo {
+         width: 138px;
+         height: 44.17px;
+         margin-bottom: 50px;
+      }
+
+      .navigation-header__list {
+         @include flex-column;
+         gap: 30px;
+         width: fit-content;
+         height: auto;
+         margin-bottom: 35px;
+      }
+
+      .navigation-header__phone,
+      .navigation-header__item {
+         font-family: 'Roboto';
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 16px;
+         color: $whiteColor;
+      }
+
+      .navigation-header__phone {
+         font-weight: 700;
       }
    }
 
@@ -36,7 +97,6 @@
       overflow: hidden;
    }
 
-   & .logo-icon,
    & .phone-block__text {
       display: block;
 
@@ -45,31 +105,21 @@
       }
    }
 
-   &__body {
-      @include flex-column;
-      align-items: center;
-      width: 100%;
-      gap: 30px;
+   // &__body {
+   //    @include flex-column;
+   //    align-items: center;
+   //    width: 100%;
+   //    gap: 14px;
 
-      @include media(910) {
-         @include flex-row;
-         gap: 10px;
-         padding-left: 15px;
-      }
+   //    @include media(910) {
+   //       @include flex-row;
+   //       gap: 10px;
+   //       padding-left: 15px;
+   //    }
 
-      @include media(1122) {
-         gap: 0;
-         padding-left: 42px;
-      }
-   }
-}
-
-.logo-icon img {
-   width: 81px;
-   height: 44.19px;
-
-   @include media(600) {
-      width: 133px;
-      height: 44px;
-   }
+   //    @include media(1122) {
+   //       gap: 0;
+   //       padding-left: 42px;
+   //    }
+   // }
 }

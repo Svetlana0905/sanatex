@@ -5,10 +5,14 @@
    &__container {
       @include flex-column;
       align-items: self-start;
-      gap: 20px;
+      gap: 9px;
       max-width: 1274px;
       margin: 0 auto;
-      padding: 0 25px 0 28px;
+      padding: 0 26px 0 28px;
+
+      @include media(600) {
+         gap: 20px;
+      }
 
       @include media(1024) {
          padding: 99px 25px 100px 28px;
@@ -16,7 +20,11 @@
    }
 
    & h2 {
-      margin-bottom: 7px;
+      margin-bottom: 8px;
       color: $fontTitleColor;
+
+      @include media (600) {
+         margin-bottom: 7px;
+      }
    }
 }

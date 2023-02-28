@@ -74,13 +74,14 @@
    display: inline-block;
    font-family: $mainFont;
    font-weight: 300;
-   font-size: 18px;
-   line-height: 21px;
-   padding: 13px 22px 12px;
+   font-size: 15px;
+   line-height: 18px;
+   padding: 11px 22px 12px;
    background: $grayColor;
    border: $borderSecondaryBtn;
    border-radius: $headerBprderRadius;
    transition: $standartTrans;
+   margin-bottom: 10px;
 
    &:hover,
    &:focus,
@@ -88,6 +89,13 @@
       color: $whiteColor;
       background: rgb(66, 74, 102);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   }
+
+   @include media(600) {
+      padding: 13px 22px 12px;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 23px;
    }
 
 }
@@ -106,8 +114,6 @@
    font-weight: 700;
    font-size: 14px;
    line-height: 16px;
-   font-size: 24px;
-   line-height: 28px;
    text-align: center;
    color: $whiteColor;
    background: $fontTitleColor;

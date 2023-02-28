@@ -7,7 +7,8 @@ import {
   burgerBtn,
   headerMenu,
   listPhone,
-  phoneHeaderButton
+  phoneHeaderButton,
+  phoneLink
 } from './../helpers/elementsNodeList'
 
 // logger (Full Logging System) 
@@ -36,7 +37,8 @@ function isWebp() {
 // Phone
 let openPhoneHeader = function () {
   phoneHeaderButton.addEventListener('click', function () {
-    console.log('hhhhhhhhhhhhh')
+    phoneHeaderButton.classList.toggle('active')
+    phoneLink.classList.toggle('active')
     listPhone.classList.toggle('hidden')
   })
 }

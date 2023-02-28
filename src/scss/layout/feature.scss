@@ -82,7 +82,7 @@
    &__bottom-block {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 34px;
+      gap: 35px;
       margin-top: -2px;
 
       & .feature__btn-block {
@@ -141,10 +141,11 @@
          }
 
          & .dark-btn-small {
-            grid-column-start: 8;
-            grid-column-end: 13;
+            grid-column-start: -6;
+            grid-column-end: -1;
             order: 3;
             font-family: $mainFont;
+            margin-bottom: -2px;
          }
       }
    }
