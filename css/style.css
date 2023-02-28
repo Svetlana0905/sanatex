@@ -746,13 +746,7 @@ img {
   opacity: 1;
   top: 5px;
   right: 17px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1609,10 +1603,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1631,7 +1625,24 @@ img {
   transition: all 0.3s ease 0s;
 }
 
+.navigation-header__logo {
+  width: 0;
+  height: 0;
+}
+
+.navigation-header__list {
+  width: 0;
+  height: 0;
+}
+
 .navigation-header.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -1641,13 +1652,46 @@ img {
       -ms-transform: scale(1);
           transform: scale(1);
   background-color: rgb(19, 29, 64);
+  z-index: 15;
 }
 
 .navigation-header.active .dark {
   color: rgb(255, 255, 255);
 }
 
-.navigation-header .logo-icon,
+.navigation-header.active .navigation-header__logo {
+  width: 138px;
+  height: 44.17px;
+}
+
+.navigation-header.active .navigation-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+}
+
+.navigation-header.active .navigation-header__phone,
+.navigation-header.active .navigation-header__item {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.navigation-header.active .navigation-header__phone {
+  font-weight: 700;
+}
+
 .navigation-header .phone-block__text {
   display: block;
 }
@@ -1665,11 +1709,6 @@ img {
           align-items: center;
   width: 100%;
   gap: 30px;
-}
-
-.logo-icon img {
-  width: 81px;
-  height: 44.19px;
 }
 
 .input-form {
@@ -1989,7 +2028,7 @@ img {
   text-align: center;
   color: rgb(255, 255, 255);
   padding-left: 25px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .item-product__quantity::after {
@@ -2277,11 +2316,29 @@ img {
   height: 14px;
   top: 5px;
   right: 22px;
-  background: url(../images/icons/blue_ruond_arrow.svg) center/cover;
+  background: url(../images/icons/white_round_arrow.svg) center/cover;
+}
+
+.phone-block__btn.active::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .phone-block__btn.dark {
   color: rgb(46, 65, 134);
+}
+
+.phone-block__btn.dark::after {
+  background: url(../images/icons/blue_ruond_arrow.svg) center/cover;
+}
+
+.phone-block__btn.dark.active {
+  color: white;
+}
+
+.phone-block__btn.dark.active::after {
+  background: url(../images/icons/white_round_arrow.svg) center/cover;
 }
 
 .phone-block__link {
@@ -2326,6 +2383,15 @@ img {
   opacity: 1;
   left: 0;
   width: 100%;
+}
+
+.logo-icon img {
+  width: 81px;
+  height: 44.19px;
+}
+
+.phone-block__link.dark.active {
+  color: rgb(255, 255, 255);
 }
 
 .popular {
@@ -4114,6 +4180,16 @@ summary:focus {
     padding: 0 81px;
   }
 
+  .list-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .link-news {
     display: block;
   }
@@ -4153,11 +4229,6 @@ summary:focus {
     margin-bottom: 45px;
   }
 
-  .logo-icon img {
-    width: 133px;
-    height: 44px;
-  }
-
   .input-form {
     width: 238px;
     background: rgb(247, 248, 252);
@@ -4171,6 +4242,11 @@ summary:focus {
   .phone-block__link {
     font-size: 22px;
     line-height: 27px;
+  }
+
+  .logo-icon img {
+    width: 133px;
+    height: 44px;
   }
 
   .popular__container {
@@ -4698,7 +4774,6 @@ summary:focus {
     overflow: hidden;
   }
 
-  .navigation-header .logo-icon,
   .navigation-header .phone-block__text {
     display: none;
   }
