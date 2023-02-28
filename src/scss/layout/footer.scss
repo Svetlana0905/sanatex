@@ -76,6 +76,12 @@
          font-size: 18px;
          line-height: 21px;
       }
+
+      &:focus,
+      &:active {
+         background: $bgDisabled;
+         color: $fontColor80;
+      }
    }
 
    & .social-block {

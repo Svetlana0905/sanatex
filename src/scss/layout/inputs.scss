@@ -12,6 +12,7 @@
    background: $inputFormBg;
    backdrop-filter: blur(7.5px);
    border-radius: $borderRadius;
+   transition: $standartTrans;
 
    @include media(600) {
       width: 238px;
@@ -24,6 +25,15 @@
       font-size: var(--typography-standart);
       line-height: 16px;
       color: $fontTitleColor;
+   }
+
+   &:hover {
+      box-shadow: $whiteBoxShadow;
+   }
+
+   &:focus,
+   &:active {
+      box-shadow: $whiteBoxShadowInput;
    }
 }
 
@@ -105,6 +115,11 @@
    display: block;
    width: 36px;
    height: 36px;
+
+   &:hover .radio__box {
+      border-radius: 5px;
+      cursor: pointer;
+   }
 }
 
 .radio__input {

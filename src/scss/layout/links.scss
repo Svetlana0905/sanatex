@@ -6,6 +6,8 @@
    line-height: 21px;
    padding: 8px 14px;
    color: $whiteColor80;
+   transition: $standartTrans;
+   border-radius: $borderRadius;
 
    @include media(1122) {
       padding: 13px 18px;
@@ -15,6 +17,12 @@
       background: $whiteColor25;
       border-radius: $borderRadius;
       animation: border 0.5s ease-in-out;
+   }
+
+   &:focus,
+   &:active {
+      background: $bgDisabled;
+      color: $fontColor80;
    }
 }
 
@@ -26,6 +34,12 @@
       color: $whiteColor;
       border-radius: $borderRadius;
       animation: border 0.5s ease-in-out;
+   }
+
+   &:focus,
+   &:active {
+      background: $fontTitleColor;
+      color: $bgDisabled;
    }
 }
 

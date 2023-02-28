@@ -20,11 +20,38 @@
    }
 
    &__link {
+      position: relative;
       font-weight: 400;
       font-size: 18px;
       line-height: 21px;
       color: $fontColor80;
-      margin-bottom: 20px
+      margin-bottom: 20px;
+      transition: $standartTrans;
+
+      &::after {
+         position: absolute;
+         content: '';
+         width: 0;
+         height: 0;
+         top: -20px;
+         right: 0;
+         transition: $standartTrans;
+      }
+
+      &:hover {
+         box-shadow: 0px 9px 8px 3px rgb(19 29 64 / 20%);
+         border-bottom-left-radius: 5px;
+         border-bottom-right-radius: 5px;
+      }
+
+      &:focus {
+         &::after {
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: url(../images/icons/blue_ruond_arrow.svg) center / cover;
+         }
+      }
    }
 }
 
@@ -35,7 +62,6 @@
       @include flex-row;
       gap: 16px;
 
-      // padding-top: 30px;
       @include media(600) {
          gap: 13px;
          padding-top: 29px;
@@ -69,6 +95,10 @@
    font-family: $otherFont;
    border-bottom: 0;
    margin-bottom: 10px;
+
+   &:hover>summary {
+      color: $fontColorLink;
+   }
 
    &__summary {
       position: relative;
